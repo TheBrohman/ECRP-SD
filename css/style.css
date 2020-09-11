@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: ". . ."
+  ". form .";
+  /*background-color: #dfc497;*/
+  background-image:  url("https://c4.wallpaperflare.com/wallpaper/136/719/794/grand-theft-auto-grand-theft-auto-v-mountain-chiliad-video-game-wallpaper-preview.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-form{
+  grid-area: form;
+  justify-self: center;
+  align-self: center;
+  background-color: gray;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.login-form h1{
+  flex: 20%;
+  font-size: 56px;
+  text-align: center;
+}
+.login-form input{
+  color: black;
+  height: 30px;
+}
+.login-form button{
+  height: 50px;
+  width: 60px;
+  border: none;
+  background-color: #dfc497;
+}
+
+.hide{
+  animation: fadeout 1s ease forwards;
+}
+
+.show{
+  animation: fadein 1s ease forwards;
+}
+
+@keyframes fadeout{
+  from {
+    opacity: 1;
+    pointer-events: all;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes fadein {
+  from{
+    opacity: 0;
+    pointer-events: none;
+  }
+  to{
+    opacity: 1;
+    pointer-events: all;
+  }
+}
